@@ -1,0 +1,5 @@
+profile: service
+defaultPackage: github.scraper
+---
+testFramework: junit
+sourceLanguage: java
