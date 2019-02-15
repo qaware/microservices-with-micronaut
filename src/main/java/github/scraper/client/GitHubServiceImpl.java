@@ -2,7 +2,9 @@ package github.scraper.client;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.micronaut.cache.annotation.Cacheable;
-import io.micronaut.core.annotation.Blocking;
+import io.micronaut.retry.annotation.CircuitBreaker;
+import io.micronaut.retry.annotation.Recoverable;
+import io.micronaut.retry.annotation.Retryable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,20 +13,23 @@ import javax.inject.Singleton;
 import java.io.IOException;
 
 @Singleton
-public class GithubService {
-    private static final Logger LOGGER = LoggerFactory.getLogger(GithubService.class);
+@Recoverable
+public class GitHubServiceImpl implements GitHubService {
+    private static final Logger LOGGER = LoggerFactory.getLogger(GitHubServiceImpl.class);
 
     private final GithubClient githubClient;
     private final ObjectMapper objectMapper;
 
     @Inject
-    public GithubService(GithubClient githubClient, ObjectMapper objectMapper) {
+    public GitHubServiceImpl(GithubClient githubClient, ObjectMapper objectMapper) {
         this.githubClient = githubClient;
         this.objectMapper = objectMapper;
     }
 
     @Cacheable("most-starred-projects")
-    @Blocking
+    @Override
+    @Retryable
+    @CircuitBreaker
     public ProjectResponseDto mostStarredProjects() throws IOException {
         LOGGER.info("Fetching projects from GitHub");
         String json = githubClient.mostStarredProjects();

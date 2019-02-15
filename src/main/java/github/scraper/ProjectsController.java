@@ -1,6 +1,6 @@
 package github.scraper;
 
-import github.scraper.client.GithubService;
+import github.scraper.client.GitHubService;
 import github.scraper.client.ProjectResponseDto;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
@@ -14,10 +14,10 @@ import java.util.stream.Collectors;
 
 @Controller("/projects")
 public class ProjectsController {
-    private final GithubService github;
+    private final GitHubService github;
 
     @Inject
-    public ProjectsController(GithubService github) {
+    public ProjectsController(GitHubService github) {
         this.github = github;
     }
 

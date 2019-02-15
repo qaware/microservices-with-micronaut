@@ -1,6 +1,6 @@
 package github.scraper;
 
-import github.scraper.client.GithubService;
+import github.scraper.client.GitHubService;
 import io.micronaut.scheduling.annotation.Scheduled;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,10 +13,10 @@ import java.io.IOException;
 public class CacheWarmer {
     private static final Logger LOGGER = LoggerFactory.getLogger(CacheWarmer.class);
 
-    private final GithubService githubService;
+    private final GitHubService githubService;
 
     @Inject
-    public CacheWarmer(GithubService githubService) {
+    public CacheWarmer(GitHubService githubService) {
         this.githubService = githubService;
     }
 
