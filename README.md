@@ -30,7 +30,9 @@
 
 1. Run `github-scraper` binary
 
-### Notes
+### Issues with GraalVM
 
-1. Service discovery / client side load balancing is broken when running as native binary, see [this ticket](https://github.com/micronaut-projects/micronaut-core/issues/1121)
-1. `@Cacheable` doesn't work with GraalVM
+1. Service discovery / client side load balancing is broken, see [this ticket](https://github.com/micronaut-projects/micronaut-core/issues/1121)
+1. `@Cacheable` doesn't work
+1. `@Scheduled` doesn't work, it can't generate `reflect.json`
+ 
