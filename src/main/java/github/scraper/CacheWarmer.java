@@ -20,7 +20,7 @@ public class CacheWarmer {
         this.githubService = githubService;
     }
 
-    @Scheduled(fixedDelay = "30s")
+    @Scheduled(fixedDelay = "${micronaut.caches.most-starred-projects.expire-after-write}")
     public void warmCache() throws IOException {
         LOGGER.debug("Warming cache...");
         githubService.mostStarredProjects();
