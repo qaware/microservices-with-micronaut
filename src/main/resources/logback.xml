@@ -8,6 +8,8 @@
         </encoder>
     </appender>
 
+    <logger name="github.scraper" level="trace"/>
+
     <root level="info">
         <appender-ref ref="STDOUT" />
     </root>

@@ -16,6 +16,10 @@
         "allDeclaredConstructors": true
       },
       {
+        "name": "github.scraper.client.ProjectResponseDto",
+        "allDeclaredConstructors": true
+      },
+      {
         "name": "github.scraper.client.ItemDto",
         "allDeclaredConstructors": true
       }
@@ -25,3 +29,8 @@
 1. Run `build-native-image.sh`
 
 1. Run `github-scraper` binary
+
+### Notes
+
+1. Service discovery / client side load balancing is broken when running as native binary, see [this ticket](https://github.com/micronaut-projects/micronaut-core/issues/1121)
+1. `@Cacheable` doesn't work with GraalVM

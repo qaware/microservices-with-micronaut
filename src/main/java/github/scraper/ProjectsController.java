@@ -1,7 +1,6 @@
 package github.scraper;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import github.scraper.client.GithubClient;
+import github.scraper.client.GithubService;
 import github.scraper.client.ProjectResponseDto;
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Controller;
@@ -15,16 +14,16 @@ import java.util.stream.Collectors;
 
 @Controller("/projects")
 public class ProjectsController {
-    private final GithubClient githubClient;
+    private final GithubService github;
 
     @Inject
-    public ProjectsController(GithubClient githubClient) {
-        this.githubClient = githubClient;
+    public ProjectsController(GithubService github) {
+        this.github = github;
     }
 
     @Get(value = "/most-stars", produces = MediaType.APPLICATION_JSON)
     public List<ProjectDto> mostStarredProjects() throws IOException {
-        ProjectResponseDto response = githubClient.mostStarredProjects();
+        ProjectResponseDto response = github.mostStarredProjects();
 
         return response.getItems().stream()
                 .map(i -> new ProjectDto(i.getFullName(), i.getStargazersCount()))

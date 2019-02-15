@@ -5,7 +5,7 @@ set -euo pipefail
 GRAAL_HOME="/home/moe/Software/graalvm"
 
 ./gradlew assemble
-# ${GRAAL_HOME}/bin/java -cp build/libs/github-scraper-0.1-all.jar io.micronaut.graal.reflect.GraalClassLoadingAnalyzer
+# ${GRAAL_HOME}/bin/java -cp build/libs/github-scraper-0.1-all.jar io.micronaut.graal.reflect.GraalClassLoadingAnalyzer build/reflect.json
 ${GRAAL_HOME}/bin/native-image --no-server \
              --class-path build/libs/github-scraper-0.1-all.jar \
              -H:ReflectionConfigurationFiles=build/reflect.json \
