@@ -1,0 +1,8 @@
+github:
+  ribbon:
+    listOfServers: https://api.github.com
+
+spring:
+  cache:
+    caffeine:
+      spec: "maximumSize=1, expireAfterWrite=30s"
