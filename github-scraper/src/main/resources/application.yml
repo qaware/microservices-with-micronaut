@@ -26,4 +26,4 @@ tracing:
   jaeger:
     enabled: true
     sampler:
-      probability: 0.1
+      probability: 1

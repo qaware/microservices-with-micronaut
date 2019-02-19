@@ -1,6 +1,6 @@
 package foo.business;
 
-import foo.dto.ProjectsDto;
+import foo.rest.dto.ProjectsDto;
 
 public interface GitHubService {
     ProjectsDto fetchProjectsAndStars();

@@ -1,6 +1,6 @@
 package foo.rest;
 
-import foo.dto.ProjectsDto;
+import foo.rest.dto.ProjectsDto;
 import io.micronaut.context.ApplicationContext;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;

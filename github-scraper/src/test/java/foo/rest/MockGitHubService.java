@@ -1,10 +1,9 @@
 package foo.rest;
 
 import foo.business.GitHubService;
-import foo.dto.ProjectDto;
-import foo.dto.ProjectsDto;
+import foo.rest.dto.ProjectDto;
+import foo.rest.dto.ProjectsDto;
 import io.micronaut.context.annotation.Primary;
-import io.micronaut.context.annotation.Replaces;
 
 import javax.inject.Singleton;
 import java.util.Arrays;

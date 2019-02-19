@@ -1,4 +1,4 @@
-package foo.dto;
+package foo.rest.dto;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

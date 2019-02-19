@@ -1,7 +1,8 @@
 package foo.business;
 
-import foo.dto.ProjectsDto;
+import foo.rest.dto.ProjectsDto;
 import io.micronaut.retry.annotation.Fallback;
+import io.micronaut.tracing.annotation.NewSpan;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -12,6 +13,7 @@ public class FallbackGitHubService implements GitHubService {
     private static final Logger LOGGER = LoggerFactory.getLogger(FallbackGitHubService.class);
 
     @Override
+    @NewSpan
     public ProjectsDto fetchProjectsAndStars() {
         LOGGER.warn("Failed to reach GitHub, someone call them!");
         return new ProjectsDto(Collections.emptyList());

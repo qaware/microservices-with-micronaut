@@ -1,10 +1,11 @@
 package foo.business;
 
 import foo.business.client.GitHubClient;
-import foo.dto.ProjectDto;
-import foo.dto.ProjectsDto;
+import foo.rest.dto.ProjectDto;
+import foo.rest.dto.ProjectsDto;
 import io.micronaut.cache.annotation.Cacheable;
 import io.micronaut.retry.annotation.Recoverable;
+import io.micronaut.tracing.annotation.NewSpan;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -22,6 +23,7 @@ public class RealGitHubService implements GitHubService {
 
     @Override
     @Cacheable("github-projects-and-stars")
+    @NewSpan
     public ProjectsDto fetchProjectsAndStars() {
         return new ProjectsDto(
                 gitHubClient.fetchProjectsWithStars().getItems().stream()

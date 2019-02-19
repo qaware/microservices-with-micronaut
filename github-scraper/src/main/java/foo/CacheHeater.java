@@ -1,7 +1,6 @@
 package foo;
 
 import foo.business.GitHubService;
-import io.micronaut.scheduling.annotation.Scheduled;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -15,7 +14,7 @@ public class CacheHeater {
         this.gitHubService = gitHubService;
     }
 
-    @Scheduled(fixedDelay = "${micronaut.caches.github-projects-and-stars.expire-after-write}")
+    // @Scheduled(fixedDelay = "${micronaut.caches.github-projects-and-stars.expire-after-write}")
     public void heatGitHubCache() {
         gitHubService.fetchProjectsAndStars();
     }
