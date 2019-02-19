@@ -1,0 +1,29 @@
+---
+micronaut:
+  application:
+    name: foo
+  http:
+    services:
+      github:
+        urls:
+          - "https://api.github.com/"
+  caches:
+    github-projects-and-stars:
+      expireAfterWrite: 30s
+      maximumSize: 1
+
+---
+micronaut:
+  metrics:
+    enabled: true
+    export:
+      prometheus:
+        enabled: true
+        step: PT1M
+        descriptions: true
+---
+tracing:
+  jaeger:
+    enabled: true
+    sampler:
+      probability: 0.1
