@@ -6,7 +6,7 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CacheHeater {
+public class CacheCheater {
     private final GitHubService gitHubService;
 
     @Autowired
