@@ -1,6 +1,6 @@
-# Code for the Talk "Microservices mit Micronaut"
+# Code for the talk "Microservices with Micronaut"
 
-Slides: https://docs.google.com/presentation/d/1ZLnuUlzW0Xc_lgvdgFiKk6T2NrQ-8UFLJhkfDINebC8/edit?usp=sharing
+Slides: https://docs.google.com/presentation/d/1DSsqc3T199nyKUMh3nOCVQSFbTdEUhDfKxyZeCM9hjU/edit?usp=sharing
 
 * [Small Graal application with one plain text endpoint](graal/)
 * [GitHub scraper implemented with Spring Boot](github-scraper-spring)
