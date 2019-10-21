@@ -2,37 +2,11 @@
 
 ## Native binary with GraalVM
 
-1. Enable the feature `graal-native-image` in micronaut
-
-1. Change the script and include `https` in the `-H:EnableURLProtocols` flag in `build-native-image.sh`
-   *Note*: The call which generates the `build/reflect.json` is best run with the java binary from GraalVM
-
-1. Copy `libsunec.so` from a JDK under `jre/lib/` to the current directory
-
-1. Change `build/reflect.json` and add this part:
-    ```json
-      {
-        "name": "java.util.ArrayList",
-        "allDeclaredConstructors": true
-      },
-      {
-        "name": "github.scraper.client.ProjectResponseDto",
-        "allDeclaredConstructors": true
-      },
-      {
-        "name": "github.scraper.client.ItemDto",
-        "allDeclaredConstructors": true
-      }
-    ```
-    Otherwise the JSON deserialization will fail.
-
-1. Run `build-native-image.sh`
-
-1. Run `github-scraper` binary
+1. Download GraalVM from [GitHub](https://github.com/oracle/graal/releases)
+1. Install native-image tool: `gu install native-image`
+1. Build the project with **Java 8**: `./gradlew clean build`
+1. Run `native-image -jar build/libs/github-scraper-graal-*-all.jar`
+1. Copy `$GRAAL_DIR/jre/lib/$PLATFORM/libsunec.so` to current working directory
+1. Run `./github-scraper-graal` binary
 
 ### Issues with GraalVM
-
-1. Service discovery / client side load balancing is broken, see [this ticket](https://github.com/micronaut-projects/micronaut-core/issues/1121)
-1. `@Cacheable` doesn't work
-1. `@Scheduled` doesn't work, it can't generate `reflect.json`
- 

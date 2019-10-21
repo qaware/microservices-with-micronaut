@@ -14,4 +14,4 @@ out/
 
 # GraalVM stuff
 libsunec.so
-github-scraper
+github-scraper-graal
