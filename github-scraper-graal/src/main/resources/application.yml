@@ -1,29 +1,13 @@
 ---
 micronaut:
   application:
-    name: github-scraper
+    name: foo
   http:
     services:
       github:
         urls:
-          - https://api.github.com
+          - "https://api.github.com/"
   caches:
-    most-starred-projects:
-      maximumSize: 1
+    github-projects-and-stars:
       expireAfterWrite: 30s
-
----
-micronaut:
-  metrics:
-    enabled: true
-    export:
-      prometheus:
-        enabled: true
-        step: PT1M
-        descriptions: true
----
-tracing:
-  jaeger:
-    enabled: true
-    sampler:
-      probability: 0.1
+      maximumSize: 1
