@@ -1,4 +1,4 @@
-package foo.rest.dto;
+package github.scraper.rest.dto;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;

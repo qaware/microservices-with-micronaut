@@ -1,6 +1,6 @@
-package foo.business;
+package github.scraper.business;
 
-import foo.rest.dto.ProjectsDto;
+import github.scraper.rest.dto.ProjectsDto;
 
 public interface GitHubService {
     ProjectsDto fetchProjectsAndStars();

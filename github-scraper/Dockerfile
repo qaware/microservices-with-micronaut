@@ -1,4 +1,4 @@
 FROM openjdk:8u171-alpine3.7
 RUN apk --no-cache add curl
-COPY build/libs/*-all.jar foo.jar
-CMD java ${JAVA_OPTS} -jar foo.jar
+COPY build/libs/*-all.jar application.jar
+CMD java ${JAVA_OPTS} -jar application.jar

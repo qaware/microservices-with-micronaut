@@ -1,8 +1,8 @@
-package foo.rest;
+package github.scraper.rest;
 
-import foo.business.GitHubService;
-import foo.rest.dto.ProjectDto;
-import foo.rest.dto.ProjectsDto;
+import github.scraper.business.GitHubService;
+import github.scraper.rest.dto.ProjectDto;
+import github.scraper.rest.dto.ProjectsDto;
 import io.micronaut.context.annotation.Primary;
 
 import javax.inject.Singleton;

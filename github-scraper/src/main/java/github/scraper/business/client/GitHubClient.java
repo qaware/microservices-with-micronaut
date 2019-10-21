@@ -1,4 +1,4 @@
-package foo.business.client;
+package github.scraper.business.client;
 
 import io.micronaut.http.MediaType;
 import io.micronaut.http.annotation.Get;

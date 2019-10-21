@@ -1,7 +1,7 @@
-package foo.rest;
+package github.scraper.rest;
 
-import foo.business.GitHubService;
-import foo.rest.dto.ProjectsDto;
+import github.scraper.business.GitHubService;
+import github.scraper.rest.dto.ProjectsDto;
 import io.micronaut.http.annotation.Controller;
 import io.micronaut.http.annotation.Get;
 

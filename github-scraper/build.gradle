@@ -4,10 +4,9 @@ plugins {
 }
 
 version "0.1"
-group "foo"
+group "github.scraper"
 
 repositories {
-    mavenLocal()
     mavenCentral()
     maven { url "https://jcenter.bintray.com" }
 }
@@ -39,7 +38,7 @@ dependencies {
 }
 
 test.classpath += configurations.developmentOnly
-mainClassName = "foo.Application"
+mainClassName = "github.scraper.Application"
 // use JUnit 5 platform
 test {
     useJUnitPlatform()

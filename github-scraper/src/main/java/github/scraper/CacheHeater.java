@@ -1,6 +1,6 @@
-package foo;
+package github.scraper;
 
-import foo.business.GitHubService;
+import github.scraper.business.GitHubService;
 import io.micronaut.scheduling.annotation.Scheduled;
 
 import javax.inject.Inject;

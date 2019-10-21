@@ -1,6 +1,6 @@
-package foo.business;
+package github.scraper.business;
 
-import foo.rest.dto.ProjectsDto;
+import github.scraper.rest.dto.ProjectsDto;
 import io.micronaut.retry.annotation.Fallback;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

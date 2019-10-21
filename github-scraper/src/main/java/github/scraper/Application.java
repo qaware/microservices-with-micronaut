@@ -1,4 +1,4 @@
-package foo;
+package github.scraper;
 
 import io.micronaut.runtime.Micronaut;
 

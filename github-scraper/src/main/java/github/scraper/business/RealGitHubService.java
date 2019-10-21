@@ -1,8 +1,8 @@
-package foo.business;
+package github.scraper.business;
 
-import foo.business.client.GitHubClient;
-import foo.rest.dto.ProjectDto;
-import foo.rest.dto.ProjectsDto;
+import github.scraper.business.client.GitHubClient;
+import github.scraper.rest.dto.ProjectDto;
+import github.scraper.rest.dto.ProjectsDto;
 import io.micronaut.cache.annotation.Cacheable;
 import io.micronaut.retry.annotation.Recoverable;
 

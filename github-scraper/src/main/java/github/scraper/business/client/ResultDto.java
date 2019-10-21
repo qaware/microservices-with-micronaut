@@ -1,4 +1,4 @@
-package foo.business.client;
+package github.scraper.business.client;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
