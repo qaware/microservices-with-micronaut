@@ -8,5 +8,3 @@
 1. Run `native-image --no-server -jar build/libs/github-scraper-graal-*-all.jar`
 1. Copy `$GRAAL_DIR/jre/lib/$PLATFORM/libsunec.so` to current working directory
 1. Run `./github-scraper-graal` binary
-
-### Issues with GraalVM
