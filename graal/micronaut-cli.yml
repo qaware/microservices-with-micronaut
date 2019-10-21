@@ -1,5 +1,0 @@
-profile: service
-defaultPackage: graal
----
-testFramework: junit
-sourceLanguage: java
