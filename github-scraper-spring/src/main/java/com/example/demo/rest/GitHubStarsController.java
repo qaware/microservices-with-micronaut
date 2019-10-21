@@ -18,7 +18,7 @@ public class GitHubStarsController {
         this.gitHubService = gitHubService;
     }
 
-    @GetMapping(value = "/stars", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+    @GetMapping(value = "/stars", produces = MediaType.APPLICATION_JSON_VALUE)
     public ProjectsDto index() {
         return gitHubService.fetchProjectsAndStars();
     }
