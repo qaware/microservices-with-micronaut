@@ -1,7 +1,7 @@
 ---
 micronaut:
   application:
-    name: github-scraper
+    name: github-scraper-graal
   http:
     services:
       github:

@@ -11,7 +11,3 @@ out/
 .project
 .settings
 .classpath
-
-# GraalVM stuff
-libsunec.so
-github-scraper-graal

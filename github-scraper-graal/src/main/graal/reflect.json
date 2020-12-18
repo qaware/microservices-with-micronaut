@@ -1,0 +1,129 @@
+[
+  {
+    "name": "com.github.benmanes.caffeine.cache.SSMSW",
+    "allDeclaredConstructors": true,
+    "allPublicConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredFields": true,
+    "allPublicFields": true
+  },
+  {
+    "name": "com.github.benmanes.caffeine.cache.BLCHeader$DrainStatusRef",
+    "allDeclaredConstructors": true,
+    "allPublicConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredFields": true,
+    "allPublicFields": true,
+    "fields": [
+      {
+        "name": "drainStatus",
+        "allowUnsafeAccess": true
+      }
+    ]
+  },
+  {
+    "name": "com.github.benmanes.caffeine.cache.PSWMS",
+    "allDeclaredConstructors": true,
+    "allPublicConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredFields": true,
+    "allPublicFields": true
+  },
+  {
+    "name": "com.github.benmanes.caffeine.cache.PS",
+    "allDeclaredConstructors": true,
+    "allPublicConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredFields": true,
+    "allPublicFields": true,
+    "fields": [
+      {
+        "name": "key",
+        "allowUnsafeAccess": true
+      },
+      {
+        "name": "value",
+        "allowUnsafeAccess": true
+      }
+    ]
+  },
+  {
+    "name": "com.github.benmanes.caffeine.cache.PSW",
+    "allDeclaredConstructors": true,
+    "allPublicConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredFields": true,
+    "allPublicFields": true,
+    "fields": [
+      {
+        "name": "writeTime",
+        "allowUnsafeAccess": true
+      }
+    ]
+  },
+  {
+    "name": "com.github.benmanes.caffeine.cache.StripedBuffer",
+    "allDeclaredConstructors": true,
+    "allPublicConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredFields": true,
+    "allPublicFields": true,
+    "fields": [
+      {
+        "name": "tableBusy",
+        "allowUnsafeAccess": true
+      }
+    ]
+  },
+  {
+    "name": "java.lang.Thread",
+    "allDeclaredConstructors": true,
+    "allPublicConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredFields": true,
+    "allPublicFields": true,
+    "fields": [
+      {
+        "name": "threadLocalRandomProbe",
+        "allowUnsafeAccess": true
+      }
+    ]
+  },
+  {
+    "name": "com.github.benmanes.caffeine.cache.BBHeader$ReadCounterRef",
+    "allDeclaredConstructors": true,
+    "allPublicConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredFields": true,
+    "allPublicFields": true,
+    "fields": [
+      {
+        "name": "readCounter",
+        "allowUnsafeAccess": true
+      }
+    ]
+  },
+  {
+    "name": "com.github.benmanes.caffeine.cache.BBHeader$ReadAndWriteCounterRef",
+    "allDeclaredConstructors": true,
+    "allPublicConstructors": true,
+    "allDeclaredMethods": true,
+    "allPublicMethods": true,
+    "allDeclaredFields": true,
+    "allPublicFields": true,
+    "fields": [
+      {
+        "name": "writeCounter",
+        "allowUnsafeAccess": true
+      }
+    ]
+  }
+]

@@ -2,9 +2,8 @@ package github.scraper;
 
 import io.micronaut.runtime.Micronaut;
 
-public class Application {
-
+public class GraalApplication {
     public static void main(String[] args) {
-        Micronaut.run(Application.class);
+        Micronaut.run(GraalApplication.class);
     }
 }
