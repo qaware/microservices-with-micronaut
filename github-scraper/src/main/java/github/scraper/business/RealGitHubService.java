@@ -26,7 +26,7 @@ public class RealGitHubService implements GitHubService {
     }
 
     @Override
-    @Cacheable("github-projects-and-stars")
+    @Cacheable(value = "github-projects-and-stars", atomic = true)
     public ProjectsDto fetchProjectsAndStars() {
         LOGGER.info("Fetching projects and stars from GitHub");
 

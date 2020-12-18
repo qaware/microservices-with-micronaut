@@ -19,7 +19,7 @@ public class RealGitHubService implements GitHubService {
     }
 
     @Override
-    @Cacheable("github-projects-and-stars")
+    @Cacheable(value = "github-projects-and-stars", sync = true)
     public ProjectsDto fetchProjectsAndStars() {
         return new ProjectsDto(
                 gitHubClient.fetchProjectsWithStars().getItems().stream()
