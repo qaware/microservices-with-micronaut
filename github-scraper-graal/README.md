@@ -1,6 +1,4 @@
-# Sample code for the QAtalk 'Microservices with Micronaut'
-
-## Native binary with GraalVM
+# Native binary with GraalVM
 
 1. Install [sdkman](https://sdkman.io/)
 1. `sdk install java 20.3.0.r11-grl`
