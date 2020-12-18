@@ -22,5 +22,4 @@ public class GitHubStarsController {
     public ProjectsDto index() {
         return gitHubService.fetchProjectsAndStars();
     }
-
 }
