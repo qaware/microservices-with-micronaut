@@ -1,6 +1,6 @@
 # Code for the talk "Microservices with Micronaut"
 
-[Looking for the slides?](https://docs.google.com/presentation/d/1DSsqc3T199nyKUMh3nOCVQSFbTdEUhDfKxyZeCM9hjU/edit?usp=sharing)
+[Looking for the slides?](slides.pdf)
 
 ## Contents
 
